@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25E07B111DFF418800EAFC04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E07B101DFF418800EAFC04 /* AppDelegate.swift */; };
+		25E07B131DFF418800EAFC04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E07B121DFF418800EAFC04 /* ViewController.swift */; };
+		25E07B161DFF418800EAFC04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E07B141DFF418800EAFC04 /* Main.storyboard */; };
+		25E07B181DFF418800EAFC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E07B171DFF418800EAFC04 /* Assets.xcassets */; };
+		25E07B1B1DFF418800EAFC04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E07B191DFF418800EAFC04 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25E07B0D1DFF418800EAFC04 /* Basic Kanji Study 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Kanji Study 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E07B101DFF418800EAFC04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25E07B121DFF418800EAFC04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25E07B151DFF418800EAFC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25E07B171DFF418800EAFC04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25E07B1A1DFF418800EAFC04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25E07B1C1DFF418800EAFC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25E07B0A1DFF418700EAFC04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25E07B041DFF418700EAFC04 = {
+			isa = PBXGroup;
+			children = (
+				25E07B0F1DFF418800EAFC04 /* Basic Kanji Study 2 */,
+				25E07B0E1DFF418800EAFC04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		25E07B0E1DFF418800EAFC04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25E07B0D1DFF418800EAFC04 /* Basic Kanji Study 2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25E07B0F1DFF418800EAFC04 /* Basic Kanji Study 2 */ = {
+			isa = PBXGroup;
+			children = (
+				25E07B101DFF418800EAFC04 /* AppDelegate.swift */,
+				25E07B121DFF418800EAFC04 /* ViewController.swift */,
+				25E07B141DFF418800EAFC04 /* Main.storyboard */,
+				25E07B171DFF418800EAFC04 /* Assets.xcassets */,
+				25E07B191DFF418800EAFC04 /* LaunchScreen.storyboard */,
+				25E07B1C1DFF418800EAFC04 /* Info.plist */,
+			);
+			path = "Basic Kanji Study 2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25E07B0C1DFF418700EAFC04 /* Basic Kanji Study 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25E07B1F1DFF418800EAFC04 /* Build configuration list for PBXNativeTarget "Basic Kanji Study 2" */;
+			buildPhases = (
+				25E07B091DFF418700EAFC04 /* Sources */,
+				25E07B0A1DFF418700EAFC04 /* Frameworks */,
+				25E07B0B1DFF418700EAFC04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Basic Kanji Study 2";
+			productName = "Basic Kanji Study 2";
+			productReference = 25E07B0D1DFF418800EAFC04 /* Basic Kanji Study 2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25E07B051DFF418700EAFC04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Limaraxa SL";
+				TargetAttributes = {
+					25E07B0C1DFF418700EAFC04 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 8FUDH43EDG;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 25E07B081DFF418700EAFC04 /* Build configuration list for PBXProject "Basic Kanji Study 2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25E07B041DFF418700EAFC04;
+			productRefGroup = 25E07B0E1DFF418800EAFC04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25E07B0C1DFF418700EAFC04 /* Basic Kanji Study 2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25E07B0B1DFF418700EAFC04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E07B1B1DFF418800EAFC04 /* LaunchScreen.storyboard in Resources */,
+				25E07B181DFF418800EAFC04 /* Assets.xcassets in Resources */,
+				25E07B161DFF418800EAFC04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25E07B091DFF418700EAFC04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25E07B131DFF418800EAFC04 /* ViewController.swift in Sources */,
+				25E07B111DFF418800EAFC04 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		25E07B141DFF418800EAFC04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E07B151DFF418800EAFC04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		25E07B191DFF418800EAFC04 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25E07B1A1DFF418800EAFC04 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25E07B1D1DFF418800EAFC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25E07B1E1DFF418800EAFC04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25E07B201DFF418800EAFC04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8FUDH43EDG;
+				INFOPLIST_FILE = "Basic Kanji Study 2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.limaraxa.bks.Basic-Kanji-Study-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		25E07B211DFF418800EAFC04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8FUDH43EDG;
+				INFOPLIST_FILE = "Basic Kanji Study 2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.limaraxa.bks.Basic-Kanji-Study-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25E07B081DFF418700EAFC04 /* Build configuration list for PBXProject "Basic Kanji Study 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E07B1D1DFF418800EAFC04 /* Debug */,
+				25E07B1E1DFF418800EAFC04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25E07B1F1DFF418800EAFC04 /* Build configuration list for PBXNativeTarget "Basic Kanji Study 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25E07B201DFF418800EAFC04 /* Debug */,
+				25E07B211DFF418800EAFC04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25E07B051DFF418700EAFC04 /* Project object */;
+}
