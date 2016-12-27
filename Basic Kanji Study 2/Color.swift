@@ -20,43 +20,29 @@ extension UIColor {
     //MARK: Defaults
     
     class func defaultBackgroundColor() -> UIColor {
-        return Palette.darkGray
-    }
-    
-    class func defaultPrimaryColor() -> UIColor {
-        return Palette.orangeLight
+        return UIColor.init(patternImage: UIImage(named: "bkg1")!)
     }
     
     class func defaultTextColor() -> UIColor {
-        return Palette.grayText
+        return UIColor.darkText
     }
     
-    class func defaultOkColor() -> UIColor {
-        return Palette.jadeGreen
+    class func seletectTextColor() -> UIColor {
+        return UIColor.white
     }
     
-    class func defaultErrorColor() -> UIColor {
-        return Palette.tomato
+    class func defaultFillColor() -> UIColor {
+        return UIColor.white.withAlphaComponent(0.3)
+    }
+    
+    class func selectedFillColor() -> UIColor {
+        return UIColor.purple
     }
     
     //MARK: Elements
     
-    class func fieldBackgroundColor() -> UIColor {
-        return UIColor.white
-    }
-    
-    class func placeHolderTextFieldColor() -> UIColor {
-        return Palette.placeHolderColor
-    }
-    
-    class func buttonBorderColor() -> UIColor {
-        return UIColor.gray
-    }
-    
-    //MARK: Specific
-    
-    class func splashGearColor() -> UIColor {
-        return Palette.veryDarkGray
-    }
+//    class func placeHolderTextFieldColor() -> UIColor {
+//        return Palette.placeHolderColor
+//    }
     
 }

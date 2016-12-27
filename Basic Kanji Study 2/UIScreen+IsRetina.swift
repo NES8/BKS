@@ -1,9 +1,17 @@
-//
-//  UIScreen+IsRetina.swift
-//  Basic Kanji Study 2
-//
-//  Created by Xavier Serra Soteras on 25/12/16.
-//  Copyright © 2016 Limaraxa SL. All rights reserved.
-//
 
-import Foundation
+import UIKit
+
+extension UIScreen {
+    
+    public func isNotRetina() -> Bool {
+        return UIScreen.main.scale < CGFloat(2.0)
+    }
+    
+    public func isRetina() -> Bool {
+        return UIScreen.main.scale == CGFloat(2.0)
+    }
+    
+    public func isRetinaHD() -> Bool {
+        return UIScreen.main.scale > CGFloat(2.0)
+    }
+}

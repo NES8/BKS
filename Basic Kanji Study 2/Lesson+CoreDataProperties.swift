@@ -18,8 +18,8 @@ extension Lesson {
 
     @NSManaged public var id: Int32
     @NSManaged public var course: Int16
-    @NSManaged public var kanjis: NSSet?
-    @NSManaged public var list: NSSet?
+    @NSManaged public var kanjis: Set<Kanji>?
+    @NSManaged public var list: Set<List>?
 
 }
 

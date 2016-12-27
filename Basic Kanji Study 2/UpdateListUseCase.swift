@@ -1,9 +1,20 @@
-//
-//  UpdateListUseCase.swift
-//  Basic Kanji Study 2
-//
-//  Created by Xavier Serra Soteras on 24/12/16.
-//  Copyright © 2016 Limaraxa SL. All rights reserved.
-//
 
 import Foundation
+
+class UpdateListUseCase {
+    
+    private let listId: Int32
+    
+    init(listId: Int32) {
+        self.listId = listId
+    }
+
+    func execute(lastStudyOrderIdViewed: Int32) {
+        DBA.sharedInstance.setLastItemIdViewed(id: lastStudyOrderIdViewed, inListWithId: listId)
+    }
+    
+    func execute(favoriteSelected: Int32) {
+        
+    }
+    
+}

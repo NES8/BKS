@@ -1,10 +1,3 @@
-//
-//  Font.swift
-//  Motor
-//
-//  Created by Xavier Serra Soteras on 5/5/16.
-//  Copyright © 2016 Schibsted. All rights reserved.
-//
 
 import UIKit
 
@@ -16,6 +9,7 @@ private struct Name {
     static let semiboldForSmallSize = "SFUIText-Semibold"
     static let semiboldForBigSize = "SFUIDisplay-Semibold"
     static let symbol = "motor"
+    static let kanji = "EPSON-KYOKASHO"
 }
 
 extension UIFont {
@@ -45,6 +39,11 @@ extension UIFont {
         } else {
             return UIFont(name: Name.semiboldForBigSize, size: adaptedSize)!
         }
+    }
+    
+    class func japo(_ size: CGFloat) -> UIFont {
+        let adaptedSize = LayoutAssistant.sizeAdaptedToScreen(size)
+        return UIFont(name: Name.kanji, size: adaptedSize)!
     }
     
     class func symbol(_ size: CGFloat) -> UIFont {

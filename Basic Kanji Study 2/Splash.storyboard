@@ -1,7 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="LZw-KQ-5aN">
+            <objects>
+                <viewController storyboardIdentifier="Root VC" id="g4u-I3-DkC" customClass="SplashViewController" customModule="Basic_Kanji_Study_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fP1-je-Xb8"/>
+                        <viewControllerLayoutGuide type="bottom" id="epz-Kg-cOW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xg3-DK-bMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dud-fm-Aa0">
+                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-9J-XQj">
+                                <rect key="frame" x="154" y="374" width="67" height="30"/>
+                                <state key="normal" title="Continuar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dud-fm-Aa0" firstAttribute="centerY" secondItem="xg3-DK-bMU" secondAttribute="centerY" id="3Ko-mE-pS0"/>
+                            <constraint firstItem="fHT-9J-XQj" firstAttribute="centerX" secondItem="xg3-DK-bMU" secondAttribute="centerX" id="Cf5-WE-CBn"/>
+                            <constraint firstItem="dud-fm-Aa0" firstAttribute="leading" secondItem="xg3-DK-bMU" secondAttribute="leadingMargin" id="FcJ-fq-gFb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dud-fm-Aa0" secondAttribute="trailing" id="asZ-PC-BkW"/>
+                            <constraint firstItem="fHT-9J-XQj" firstAttribute="top" secondItem="dud-fm-Aa0" secondAttribute="bottom" constant="30" id="erV-Ln-jsB"/>
+                            <constraint firstItem="dud-fm-Aa0" firstAttribute="centerX" secondItem="xg3-DK-bMU" secondAttribute="centerX" id="hP8-hj-6iQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLbl" destination="dud-fm-Aa0" id="Hm4-Ez-xMv"/>
+                        <outlet property="nextBtn" destination="fHT-9J-XQj" id="Xww-MI-nRv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8I-g4-Op2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="177"/>
+        </scene>
+    </scenes>
 </document>

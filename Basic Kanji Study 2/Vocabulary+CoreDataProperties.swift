@@ -18,11 +18,11 @@ extension Vocabulary {
 
     @NSManaged public var id: Int32
     @NSManaged public var kanjis: NSObject?
-    @NSManaged public var meaning: String?
-    @NSManaged public var reading: String?
-    @NSManaged public var word: String?
-    @NSManaged public var kanji: Kanji?
-    @NSManaged public var listOrders: NSSet?
+    @NSManaged public var meaning: String
+    @NSManaged public var reading: String
+    @NSManaged public var word: String
+    @NSManaged public var kanji: Kanji
+    @NSManaged public var listOrders: Set<StudyOrder>?
 
 }
 

@@ -14,13 +14,21 @@ class LayoutAssistant {
     static let isPad = UIDevice.current.userInterfaceIdiom == .pad
     static let screenSizeLong: CGFloat = UIScreen.main.bounds.size.width > UIScreen.main.bounds.size.height ? UIScreen.main.bounds.size.width : UIScreen.main.bounds.size.height
     static let screenSizeShort: CGFloat = UIScreen.main.bounds.size.width < UIScreen.main.bounds.size.height ? UIScreen.main.bounds.size.width : UIScreen.main.bounds.size.height
-    static let screenCoefficient: CGFloat = CGFloat(screenSizeShort / (isPad ? 756 : 320))
+    static let screenCoefficient: CGFloat = CGFloat(screenSizeShort / 320)
+//    static let screenCoefficient: CGFloat = CGFloat(screenSizeShort / (isPad ? 756 : 320))
 
     
     //MARK: Size
     
     static func sizeAdaptedToScreen(_ size: CGFloat) -> CGFloat {
         return size * screenCoefficient
+    }
+    
+    //MARK: Labels
+    
+    static func topCounterLbl(_ lbl: UILabel) {
+        lbl.font = .regular(11)
+        lbl.textColor = .defaultTextColor()
     }
     
     //MARK: BarButtons
@@ -34,28 +42,52 @@ class LayoutAssistant {
     
     //MARK: Buttons
     
-    static func buttonRounded(_ button: UIButton, color: UIColor) {
+//    static func buttonRounded(_ button: UIButton, color: UIColor) {
+//        button.backgroundColor = .clear
+//        button.layer.cornerRadius = Size.elementCornerRadius
+//        button.layer.borderColor = color.cgColor
+//        button.layer.borderWidth = Size.elementBorderWidth
+//        button.setTitleColor(color, for: UIControlState())
+//        button.titleLabel?.font = UIFont.light(Size.fontSizeButtonDefault)
+//        button.addTarget(LayoutAssistant.sharedInstance, action: #selector(buttonRoundedStateHighlighted(_:)), for: .touchDown)
+//        button.addTarget(LayoutAssistant.sharedInstance, action: #selector(buttonRoundedStateNormal(_:)), for: .touchUpInside)
+//        button.addTarget(LayoutAssistant.sharedInstance, action: #selector(buttonRoundedStateNormal(_:)), for: .touchUpOutside)
+//    }
+//    
+//    static func buttonMainMenu(_ button: UIButton, imageName: String) {
+//        button.layer.cornerRadius = Keys.View.elementCornerRadius
+//        button.layer.borderWidth = Keys.View.elementBorderWidth
+//        button.layer.borderColor = UIColor.defaultPrimaryColor().cgColor
+//        let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
+//        button.setImage(image, for: .normal)
+//        button.imageView?.renderWithColor(.defaultPrimaryColor())
+//        button.tintColor = .defaultPrimaryColor()
+//    }
+    
+    static func buttonClose(_ button: UIButton) {
         button.backgroundColor = .clear
-        button.layer.cornerRadius = Size.elementCornerRadius
-        button.layer.borderColor = color.cgColor
-        button.layer.borderWidth = Size.elementBorderWidth
-        button.setTitleColor(color, for: UIControlState())
-        button.titleLabel?.font = UIFont.light(Size.fontSizeButtonDefault)
-        button.addTarget(LayoutAssistant.sharedInstance, action: #selector(buttonRoundedStateHighlighted(_:)), for: .touchDown)
-        button.addTarget(LayoutAssistant.sharedInstance, action: #selector(buttonRoundedStateNormal(_:)), for: .touchUpInside)
-        button.addTarget(LayoutAssistant.sharedInstance, action: #selector(buttonRoundedStateNormal(_:)), for: .touchUpOutside)
+        button.setTitleColor(.selectedFillColor(), for: .normal)
+        button.titleLabel?.font = .symbol(17)
+        button.setTitle(Keys.Symbol.close, for: .normal)
     }
     
-    static func buttonMainMenu(_ button: UIButton, imageName: String) {
-        button.layer.cornerRadius = Keys.View.elementCornerRadius
-        button.layer.borderWidth = Keys.View.elementBorderWidth
-        button.layer.borderColor = UIColor.defaultPrimaryColor().cgColor
-        let image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
-        button.imageView?.renderWithColor(.defaultPrimaryColor())
-        button.tintColor = .defaultPrimaryColor()
+    static func buttonFavorite(_ button: UIButton) {
+        button.backgroundColor = .clear
+        button.setTitleColor(.selectedFillColor(), for: .normal)
+        button.titleLabel?.font = .symbol(15)        
     }
-
+    
+    static func buttonPreviousElement(_ button: UIButton) {
+        button.setTitle(Keys.Symbol.backBtn, for: .normal)
+        button.setTitleColor(.selectedFillColor(), for: .normal)
+        button.titleLabel?.font = .symbol(17)
+    }
+    
+    static func buttonNextElement(_ button: UIButton) {
+        button.setTitle(Keys.Symbol.nextBtn, for: .normal)
+        button.setTitleColor(.selectedFillColor(), for: .normal)
+        button.titleLabel?.font = .symbol(17)
+    }
     
     //MARK: Buttons private
     

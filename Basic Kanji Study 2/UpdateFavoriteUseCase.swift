@@ -1,9 +1,20 @@
-//
-//  UpdateFavoriteUseCase.swift
-//  Basic Kanji Study 2
-//
-//  Created by Xavier Serra Soteras on 23/12/16.
-//  Copyright © 2016 Limaraxa SL. All rights reserved.
-//
 
 import Foundation
+
+class UpdateFavoriteUseCase {
+    
+    private let listId: Int32
+    
+    init(listId: Int32) {
+        self.listId = listId
+    }
+    
+    func execute(status: Bool, kanji: Kanji) {
+        DBA.sharedInstance.setFavorite(status: status, elementWithId: kanji.id, inListWithId: listId)
+    }
+    
+    func execute(status: Bool, vocabulary: Vocabulary) {
+        DBA.sharedInstance.setFavorite(status: status, elementWithId: vocabulary.id, inListWithId: listId)
+    }
+    
+}

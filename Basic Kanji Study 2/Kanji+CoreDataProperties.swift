@@ -17,14 +17,14 @@ extension Kanji {
     }
 
     @NSManaged public var id: Int32
-    @NSManaged public var kanji: String?
-    @NSManaged public var kunyomi: String?
-    @NSManaged public var meaning: String?
-    @NSManaged public var onyomi: String?
+    @NSManaged public var kanji: String
+    @NSManaged public var kunyomi: String
+    @NSManaged public var meaning: String
+    @NSManaged public var onyomi: String
     @NSManaged public var strokes: Int16
-    @NSManaged public var lesson: Lesson?
-    @NSManaged public var listOrders: NSSet?
-    @NSManaged public var vocabularies: NSSet?
+    @NSManaged public var lesson: Lesson
+    @NSManaged public var listOrders: Set<StudyOrder>?
+    @NSManaged public var vocabularies: Set<Vocabulary>?
 
 }
 

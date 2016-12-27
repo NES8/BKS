@@ -16,15 +16,15 @@ extension List {
         return NSFetchRequest<List>(entityName: "List");
     }
 
-    @NSManaged public var creationDate: NSDate?
+    @NSManaged public var creationDate: NSDate
     @NSManaged public var favoriteSelected: Bool
     @NSManaged public var id: Int32
-    @NSManaged public var lastAccessDate: NSDate?
+    @NSManaged public var lastAccessDate: NSDate
     @NSManaged public var random: Bool
-    @NSManaged public var type: String?
-    @NSManaged public var lastItemViewed: Int32
-    @NSManaged public var lessons: NSSet?
-    @NSManaged public var order: NSSet?
+    @NSManaged public var type: String
+    @NSManaged public var lastStudyOrderIdViewed: Int32
+    @NSManaged public var lessons: Set<Lesson>?
+    @NSManaged public var order: Set<StudyOrder>?
 
 }
 
@@ -49,10 +49,10 @@ extension List {
 extension List {
 
     @objc(addOrderObject:)
-    @NSManaged public func addToOrder(_ value: Order)
+    @NSManaged public func addToOrder(_ value: StudyOrder)
 
     @objc(removeOrderObject:)
-    @NSManaged public func removeFromOrder(_ value: Order)
+    @NSManaged public func removeFromOrder(_ value: StudyOrder)
 
     @objc(addOrder:)
     @NSManaged public func addToOrder(_ values: NSSet)

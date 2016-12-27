@@ -1,35 +1,53 @@
-//
-//  SplashViewController.swift
-//  Basic Kanji Study 2
-//
-//  Created by Xavier Serra Soteras on 18/12/16.
-//  Copyright © 2016 Limaraxa SL. All rights reserved.
-//
 
 import UIKit
 
-class SplashViewController: UIViewController {
+class SplashViewController: BaseViewController {
 
+    @IBOutlet weak var messageLbl: UILabel!
+    @IBOutlet weak var nextBtn: UIButton!
+    
+    var presenter: SplashPresenter!
+    override var lifecyclePresenter: BasePresenter? {
+        return presenter
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.backgroundColor = .defaultBackgroundColor()
+        
+        messageLbl.isHidden = true
+        nextBtn.isHidden = true
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showMessage() {
+        messageLbl.text = message()
+        messageLbl.font = .light(20)
+        messageLbl.isHidden = false
+        nextBtn.setTitleColor(.selectedFillColor(), for: .normal)
+        nextBtn.setTitleColor(UIColor.selectedFillColor().withAlphaComponent(0.4), for: .disabled)
+        nextBtn.addTarget(self, action: #selector(nextPushed), for: .touchUpInside)
+        nextBtn.titleLabel?.font = .regular(14)
+        nextBtn.isEnabled = false
+        nextBtn.isHidden = false
     }
-    */
+    
+    func enableNextBtn() {
+        nextBtn.isEnabled = true
+    }
+    
+    func nextPushed() {
+        presenter.didFinishedSplashScreen()
+    }
+    
+    func message() -> String {
+        if UIScreen.main.isNotRetina() {
+            return "Hola Lili\n\nDesitjo que t’agradi\naquest regal\nfet amb tota la il·lusió"
+        } else if UIScreen.main.isRetinaHD() {
+            return "Hola Sergi\n\nEspero que\nhagis passat un\nBon Nadal\ni tinguis un\nFeliç 2017"
+        } else {
+            return "Carregant...\nUn moment, si us plau"
+        }
+    }
 
 }

@@ -12,4 +12,6 @@ import CoreData
 
 public class Lesson: NSManagedObject {
 
+    public var isSeleted: Bool = false
+    
 }

@@ -1,9 +1,15 @@
-//
-//  UIView+blur.swift
-//  Basic Kanji Study 2
-//
-//  Created by Xavier Serra Soteras on 23/12/16.
-//  Copyright © 2016 Limaraxa SL. All rights reserved.
-//
 
-import Foundation
+import UIKit
+
+extension UIView {
+    
+    func blurBackgroundExtraLight() {
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.insertSubview(blurEffectView, at: 0)
+    }
+}

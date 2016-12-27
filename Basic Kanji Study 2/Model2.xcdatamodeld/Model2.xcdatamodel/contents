@@ -8,7 +8,7 @@
         <attribute name="onyomi" attributeType="String" syncable="YES"/>
         <attribute name="strokes" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="lesson" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="kanjis" inverseEntity="Lesson" syncable="YES"/>
-        <relationship name="listOrder" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="kanjis" inverseEntity="Order" syncable="YES"/>
+        <relationship name="listOrders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudyOrder" inverseName="kanji" inverseEntity="StudyOrder" syncable="YES"/>
         <relationship name="vocabularies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vocabulary" inverseName="kanji" inverseEntity="Vocabulary" syncable="YES"/>
     </entity>
     <entity name="Lesson" representedClassName=".Lesson" syncable="YES">
@@ -22,18 +22,18 @@
         <attribute name="favoriteSelected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lastAccessDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="lastItemViewed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastStudyOrderIdViewed" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="lessons" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="list" inverseEntity="Lesson" syncable="YES"/>
-        <relationship name="order" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="list" inverseEntity="Order" syncable="YES"/>
+        <relationship name="order" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudyOrder" inverseName="list" inverseEntity="StudyOrder" syncable="YES"/>
     </entity>
-    <entity name="Order" representedClassName=".Order" syncable="YES">
+    <entity name="StudyOrder" representedClassName=".StudyOrder" syncable="YES">
         <attribute name="favorite" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="kanjis" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kanji" inverseName="listOrder" inverseEntity="Kanji" syncable="YES"/>
+        <relationship name="kanji" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Kanji" inverseName="listOrders" inverseEntity="Kanji" syncable="YES"/>
         <relationship name="list" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="order" inverseEntity="List" syncable="YES"/>
-        <relationship name="vocabularies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vocabulary" inverseName="listOrder" inverseEntity="Vocabulary" syncable="YES"/>
+        <relationship name="vocabulary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Vocabulary" inverseName="listOrders" inverseEntity="Vocabulary" syncable="YES"/>
     </entity>
     <entity name="Vocabulary" representedClassName=".Vocabulary" syncable="YES">
         <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
@@ -42,13 +42,13 @@
         <attribute name="reading" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="word" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="kanji" maxCount="1" deletionRule="Cascade" destinationEntity="Kanji" inverseName="vocabularies" inverseEntity="Kanji" syncable="YES"/>
-        <relationship name="listOrder" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="vocabularies" inverseEntity="Order" syncable="YES"/>
+        <relationship name="listOrders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StudyOrder" inverseName="vocabulary" inverseEntity="StudyOrder" syncable="YES"/>
     </entity>
     <elements>
         <element name="Kanji" positionX="-407" positionY="108" width="128" height="178"/>
         <element name="Lesson" positionX="-146" positionY="110" width="128" height="103"/>
         <element name="List" positionX="61" positionY="243" width="128" height="178"/>
-        <element name="Order" positionX="-164" positionY="242" width="128" height="118"/>
+        <element name="StudyOrder" positionX="-164" positionY="242" width="128" height="118"/>
         <element name="Vocabulary" positionX="-639" positionY="212" width="128" height="148"/>
     </elements>
 </model>

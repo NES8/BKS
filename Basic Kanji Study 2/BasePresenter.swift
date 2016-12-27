@@ -2,12 +2,6 @@
 import Foundation
 
 enum ErrorToShow : Error {
-    case nameNotValid
-    case emailNotValid
-    case phoneNotValid
-    case taxiIdNotValid
-    case priceNotValid
-    case connectionError
     case messageError(message: String)
 }
 

@@ -1,25 +1,23 @@
 
 import UIKit
 
-enum TargetId {
-    case passenger
-    case driver
-}
-
 struct Keys {
     
-    fileprivate static let host = "http://taxiplus.pixind.net/api/v1/"
+    fileprivate static let host = "http://www.ferdex.com/BKS/"
     
     struct Url {
-        static let taxis = "\(host)taxis"
-        static let passengers = "\(host)passengers"
-        static let runs = "\(host)runs"
+        static let version = "\(host)versio.txt"
+        static let allData = "\(host)kanjis.txt"
+    }
+    
+    struct Runtime {
+        static let isIpad = UIDevice.current.userInterfaceIdiom == .pad
     }
     
     struct View {
         static let elementCornerRadius = CGFloat(8)
         static let elementBorderWidth = CGFloat(1)
-        static let fontSizeButtonDefault = CGFloat(16)
+        static let lessonCollectionCellSize = Keys.Runtime.isIpad ? CGSize(width: 100, height: 100) : CGSize(width: 50, height: 50)
         static let screenMinSize = UIScreen.main.bounds.size.width < UIScreen.main.bounds.size.height ? UIScreen.main.bounds.size.width : UIScreen.main.bounds.size.height
         static let screenCoefficient = CGFloat(Keys.View.screenMinSize / (UIDevice.current.userInterfaceIdiom == .phone ? 320 : 756))
     }
@@ -31,20 +29,13 @@ struct Keys {
     }
     
     struct Symbol {
+        static let favoriteFilled = "Ç"
+        static let favoriteEmpty = "J"
         static let check = "U"
         static let clearText = "8"
+        static let close = "l"
         static let warning = "a"
-        static let padlock = "h"
-        static let nameEntry = "C"
-        static let email = "M"
-        static let phone = "r"
         static let backBtn = "m"
-        static let taxiBtn = "e"
-        static let runsListBtn = "6"
-        static let wrench = "t"
-    }
-    
-    struct Text {
-        static let sufixCurrency = " €"
+        static let nextBtn = "n"
     }
 }

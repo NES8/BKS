@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var navigator: RootNavigator!
+    var compositionRute: CompositionRute {
+        return navigator.compositionRute
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        createWindow()
+        installRootNavigator()
+
         return true
     }
 
@@ -41,6 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // MARK: Private
+    
+    fileprivate func createWindow() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .defaultBackgroundColor()
+    }
+    
+    fileprivate func installRootNavigator() {
+        navigator = RootNavigator()
+        navigator.installRootViewController(window!)
+        
+        window?.makeKeyAndVisible()
+    }
 }
 

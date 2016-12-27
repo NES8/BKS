@@ -19,7 +19,7 @@ extension StudyOrder {
     @NSManaged public var favorite: Bool
     @NSManaged public var id: Int32
     @NSManaged public var kanji: Kanji?
-    @NSManaged public var list: List?
+    @NSManaged public var list: List
     @NSManaged public var vocabulary: Vocabulary?
 
 }
