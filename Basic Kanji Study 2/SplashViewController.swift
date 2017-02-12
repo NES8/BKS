@@ -41,13 +41,7 @@ class SplashViewController: BaseViewController {
     }
     
     func message() -> String {
-        if UIScreen.main.isNotRetina() {
-            return "Hola Lili\n\nDesitjo que t’agradi\naquest regal\nfet amb tota la il·lusió"
-        } else if UIScreen.main.isRetinaHD() {
-            return "Hola Sergi\n\nEspero que\nhagis passat un\nBon Nadal\ni tinguis un\nFeliç 2017"
-        } else {
-            return "Carregant...\nUn moment, si us plau"
-        }
+        return "Informació:\n\nL’app desa cada un dels últims casos d’estudi (kanji, vocabulari, yomi), de forma que amb el botó ‘continuar’ es pot seguir on s'estava.\n\nL’ordre (random o no) queda definit el primer cop. Els favorits són propis de cada cas d’estudi."
     }
 
 }

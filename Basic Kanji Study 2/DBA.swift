@@ -376,6 +376,29 @@ class DBA {
         }
     }
     
+    func updateDataBase() {
+        let allLessons = getAllManagedObjectsSortedById(forEntity: DBKeys.LessonEntityName) as! [Lesson]
+        print("allLessons.count: \(allLessons.count)")
+        if allLessons.count < 41 {
+            loadUpdateData()
+        }
+    }
+    
+    private func loadUpdateData() {
+        guard let filePath = Bundle.main.path(forResource: "UpdateData", ofType: "txt") else {
+            fatalError("ERROR UpdateData.txt not found")
+        }
+        
+        do {
+            let text = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+            insertDataText(text: text) {
+                print("Initial Data Inserted in data base")
+            }
+        } catch {
+            fatalError("ERROR reading UpdateData.txt \(error)")
+        }
+    }
+    
     //MARK: Private methods
     
     private func getManagedObject(withId id: Int32, inEntity entityName: String) -> NSManagedObject {

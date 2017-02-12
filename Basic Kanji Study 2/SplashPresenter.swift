@@ -5,6 +5,9 @@ class SplashPresenter : BasePresenter {
     private weak var ui: SplashViewController?
     private let navigator: RootNavigator
     
+    private let defaults = UserDefaults.standard
+    private let kSUD = "FirstUpdate2" //"BonNadal2016"
+    
     init(ui: SplashViewController,
          navigator: RootNavigator
         ) {
@@ -16,15 +19,14 @@ class SplashPresenter : BasePresenter {
         
         let now = NSDate()
         
-        let defaults = UserDefaults.standard
-        if let _ = defaults.object(forKey: "BonNadal2016") {
+        if let _ = defaults.object(forKey: kSUD) {
             DBA.sharedInstance.loadDataBase()
             didFinishedSplashScreen()
         } else {
             ui?.showMessage()
             let deadlineTime = DispatchTime.now() + .seconds(1)
             DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-                self.esborrarAquestaPutaMerda()  
+                self.loadAndUpdateAndShowMessage()
             }
         }
         
@@ -37,11 +39,11 @@ class SplashPresenter : BasePresenter {
         
     }
     
-    func esborrarAquestaPutaMerda() {
+    func loadAndUpdateAndShowMessage() {
         DBA.sharedInstance.loadDataBase()
+        DBA.sharedInstance.updateDataBase()
         ui?.enableNextBtn()
-        let defaults = UserDefaults.standard
-        defaults.set(true, forKey: "BonNadal2016")
+        defaults.set(true, forKey: kSUD)
     }
     
     func didFinishedSplashScreen() {
